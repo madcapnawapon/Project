@@ -2,11 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Find Pet Sitters</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    hello greeting 12345
+    <header>
+        
+        
+           
+                <img src="/pngtree-simple-cute-pet-dog-background-picture-image_1375478.jpg" alt="Dog and Cat" class="background-image">
+                <h1>Find Pet Sitters</h1>
+                <p>Connecting pets with loving sitters</p>
+            
+           
+        
+        
+    </header>
+
+    <section id="search-section">
+        <h2>Search for a Pet Sitter</h2>
+        <form id="search-form">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="pet-type">Pet Type:</label>
+            <select id="pet-type" name="pet-type">
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <section id="results-section">
+        <!-- Display search results here -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Find Pet Sitters</p>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
