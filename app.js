@@ -11,6 +11,11 @@ document.getElementById('search-form').addEventListener('submit', function(event
     // Display search results
     displayResults(searchResults);
 });
+document.getElementById('mobile-menu').addEventListener('click', function() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+});
+
 
 function performSearch(location, petType) {
     // Implement your search logic here (e.g., make an AJAX request to a server)
