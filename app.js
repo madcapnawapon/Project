@@ -23,6 +23,7 @@ function performSearch(location, petType) {
     return [
         { name: 'Pet Sitter 1', rating: 4.5, services: ['dog walking', 'cat sitting'] },
         { name: 'Pet Sitter 2', rating: 5, services: ['pet boarding', 'dog training'] },
+        { name: 'Pet Sitter 3', rating: 3.5, services: ['pet boarding', 'hamster training'] },
         // Add more results as needed
     ];
 }
