@@ -84,10 +84,18 @@
         <button type="submit">Login</button>
     </form>
 
-    <form class ="signup-form">
-        <button type="submit">Sign up</button>
+    <!-- เพิ่ม ID ให้กับปุ่ม "Sign up" -->
+    <form class="signup-form">
+        <button type="button" id="signup-button">Sign up</button>
     </form>
 </div>
+
+<!-- เพิ่ม script เพื่อทำการเปลี่ยนเส้นทางไปยังหน้า "register.html" -->
+<script>
+    document.getElementById('signup-button').addEventListener('click', function() {
+        window.location.href = 'register.html';
+    });
+</script>
 
 </body>
 </html>
