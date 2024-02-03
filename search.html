@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Page</title>
+    <title>Search Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,7 +15,7 @@
             height: 100vh;
         }
 
-        .login-container {
+        .search-container {
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
@@ -26,22 +26,25 @@
             align-items: center;
         }
 
-        .login-container h2 {
+        .search-container h2 {
             text-align: center;
+            margin-bottom: 20px;
+            color: #333; /* สีตัวอักษรเข้ม */
         }
 
-        .register-form {
+        .search-form {
             display: flex;
             flex-direction: column;
-            margin-top: 20px;
+            gap: 10px;
             width: 100%;
         }
 
-        .register-form label {
+        .search-form label {
             margin-bottom: 8px;
+            color: #555; /* สีตัวอักษรเข้มกว่า */
         }
 
-        .register-form input {
+        .search-form input {
             padding: 8px;
             margin-bottom: 16px;
             border: 1px solid #ccc;
@@ -49,7 +52,7 @@
             width: 100%;
         }
 
-        .register-form button {
+        .search-form button {
             padding: 10px;
             background-color: #007bff;
             color: #fff;
@@ -58,36 +61,33 @@
             cursor: pointer;
             width: 100%;
         }
-
-        .signup-form button {
-            padding: 10px;
-            background-color: #626363;
-            color: #fff;
-            border: 8px solid #ffffff;
-            border-radius: 8px;
-            cursor: pointer;
-            width: 100%;
-        }
     </style>
 </head>
 <body>
 
-<div class="login-container">
-    <h2>Register</h2>
-    <form class="register-form">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+<div class="search-container">
+    <h2>Search</h2>
+    <form class="search-form" onsubmit="return submitSearch()">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <label for="pet-type">Pet Type:</label>
+        <select id="pet-type" name="pet-type">
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="hamster">Hamster</option>
+        </select>
 
-        <button type="submit">Register</button>
-    </form>
-
-    <form class ="signup-form">
-        <button type="submit">Sign up</button>
+        <button type="submit">Search</button>
     </form>
 </div>
+
+<script>
+    function submitSearch() {
+        alert("Performing search...");
+        return false;
+    }
+</script>
 
 </body>
 </html>
