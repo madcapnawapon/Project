@@ -1,14 +1,27 @@
+*{
+    margin : 0;
+    padding :0;
+    box-sizing: 0;
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+nav {
+    background-color:#3498db;
+    padding: 1rem;
+
+}
+.nav-wrapper {
+    display : flex  ;
+    justify-content: space-between;
+    
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-header {
-    background-color: #3498db;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
 }
 
 section {
@@ -40,12 +53,24 @@ body {
     z-index: -1; /* ส่งไปข้างหลังของเนื้อหา */
 }
 
-header {
-    background-color: rgba(52, 152, 219, 0.7); /* สีพื้นหลังที่ทำให้ภาพดูโปร่งแสง */
-    color: #fff;
-    text-align: center;
-    padding: 0.5em;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 label {
@@ -72,30 +97,13 @@ footer {
     bottom: 0;
     width: 100%;
 }
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
 
-.menu-toggle span {
-    height: 3px;
-    width: 25px;
-    background-color: #fff;
-    margin: 5px 0;
-    transition: 0.4s;
-}
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: left;
-}
 
-.logo {
-    font-size: 1.5em;
-}
 
+.nav-wrapper .logo h3{
+    color: #fff
+}
 .menu {
     list-style: none;
     display: flex;
@@ -115,7 +123,7 @@ footer {
 .menu a:hover {
     color: #e74c3c;
 }
-@media only screen and (max-width: 768px) {
+/*@media only screen and (max-width: 768px) {
     .menu-toggle {
         display: flex;
     }
@@ -141,3 +149,4 @@ footer {
     }
 }
 
+/*
