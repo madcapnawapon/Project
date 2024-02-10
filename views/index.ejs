@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Pet Sitters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+                <nav> 
+                    <div class="contianer">
+                    <div class="nav-wrapper">
+                        <div class="logo"> 
+                            <a href="index.html">
+                                <h3>Find Pet Sitters</h3>
+                                <h6>connect with lovely pet Sitter</h6>
+                            </a>
+                        </div>
+                        
+                        <ul class="menu">
+                            <li><a href="indexhome.html">Home</a></li>
+                            <li><a href="search.html">Search</a></li>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="register.html">Register</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                </nav>
+                
+        
+            
+    
+    
+
+    <section id="search-section">
+          <img src="/pngtree-simple-cute-pet-dog-background-picture-image_1375478.jpg" alt="Dog and Cat" class="background-image">
+
+        <h2>เลือกประเภทสัตว์เลี้ยงของคุณ</h2>
+        <form id="search-form">
+            <label for="service">ประเภทการใช้งาน</label>
+            <ul class="service">
+                <li><a href="index.html">หาผู้รับเลี้ยง</a></li>
+                <li><a href="search.html">ผู้รับเลี้ยง</a></li>
+            </ul>
+ 
+            <script>
+            function toggleDropdown() {
+                var dropdownContent = document.getElementById("dropdown-content");
+                dropdownContent.classList.toggle("show");
+            }
+            
+            function confirmSelection() {
+                var dropdownContent = document.getElementById("dropdown-content");
+                dropdownContent.classList.remove("show");
+            }
+            </script>
+            
+            <style>
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            
+            .dropdown-label {
+                cursor: pointer;
+            }
+            
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                padding: 12px 16px;
+                z-index: 1;
+            }
+            
+            .dropdown-content.show {
+                display: block;
+            }
+            
+            .dropdown-arrow {
+                margin-left: 5px;
+            }
+            </style>
+            
+        </form>
+    </section>
+
+    <section id="results-section">
+        <!-- Display search results here -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Find Pet Sitters</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
