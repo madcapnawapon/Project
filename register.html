@@ -53,27 +53,21 @@ button:hover {
     </style>
     <section id="registration-section">
         <h2>Pet Sitter Registration</h2>
-        <form id="registration-form">
-            <label for="full-name">Full Name:</label>
-            <input type="text" id="full-name" name="full-name" required>
+        <form id="registration-form" onsubmit="return validateForm()">
+            <label for="user-name">User name:</label>
+            <input type="text" id="user-name" name="user-name" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
             <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone" required>
-
-            <label for="address">Address:</label>
-            <textarea id="address" name="address" rows="3" required></textarea>
-
-            <label for="experience">Pet Sitting Experience:</label>
-            <textarea id="experience" name="experience" rows="5" required></textarea>
-
-            <label for="pet-preferences">Pet Preferences:</label>
-            <input type="text" id="pet-preferences" name="pet-preferences">
-
-            <label for="availability">Availability:</label>
-            <input type="text" id="availability" name="availability">
 
             <button type="submit"><a href="Login.html">Register</a></button>
         </form>
@@ -84,5 +78,18 @@ button:hover {
     </footer>
 
     <script src="app.js"></script>
+    <script>
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+
+            if (password !== confirmPassword) {
+                alert("Password and Confirm Password do not match.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 </body>
 </html>
