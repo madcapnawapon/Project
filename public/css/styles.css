@@ -40,8 +40,38 @@ section {
     padding-top: 20px;
 }
 
+.service {
+    list-style-type: none; /* ลบสัญลักษณ์ของรายการ */
+    padding: 0; /* ลบการขยับของรายการ */
+    display: flex;
+    justify-content: space-between;
+}
 
+.service li {
+    width: 500px; /* ปรับขนาดกว้างของกล่อง */
+    height: 100px; /* ปรับความสูงของกล่อง */
+    margin :30px;
+    margin-bottom: 20px; /* กำหนดระยะห่างด้านล่างของรายการ */
+    background-color: #f0f0f0; /* สีพื้นหลังของกล่อง */
+    border: 1px solid #ccc; /* เส้นขอบ */
+    border-radius: 10px; /* ทำให้มีเส้นโค้งเล็ก ๆ ที่มุม */
+    text-align: center; /* จัดเนื้อหาในกล่องตรงกลาง */
+    line-height: 100px; /* จัดเนื้อหาในกล่องตรงกลาง */
+    
+}
 
+.service li a {
+    text-decoration: none; /* ลบขีดเส้นใต้ข้อความลิงก์ */
+    color: #333; /* สีข้อความลิงก์ */
+    display: block; /* ทำให้ลิงก์เต็มพื้นที่ของกล่อง */
+    height: 100%; /* ขยายลิงก์เต็มพื้นที่ของกล่อง */
+    width: 100%; /* ขยายลิงก์เต็มพื้นที่ของกล่อง */
+    transition: background-color 0.3s; /* เพิ่มอนิเมชันเมื่อโฮเวอร์ */
+}
+
+.service li a:hover {
+    background-color: #e0e0e0; /* เปลี่ยนสีพื้นหลังเมื่อโฮเวอร์ */
+}
 
 form {
     display: flex;
