@@ -3,91 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .search-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .search-container h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #333; 
-        }
-
-        .search-form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            width: 100%;
-        }
-
-        .search-form label {
-            margin-bottom: 8px;
-            color: #555; 
-        }
-
-        .search-form input {
-            padding: 8px;
-            margin-bottom: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            width: 100%;
-        }
-
-        .search-form button {
-            padding: 10px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-        }
-    </style>
+    <title>Find Pet Sitters</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="search-container">
-    <h2>Search</h2>
-    <form class="search-form" onsubmit="return submitSearch()">
-        <label for="location">Location:</label>
-        <input type="text" id="location" name="location" required>
+<nav> 
+    <div class="contianer">
+        <div class="nav-wrapper">
+            <div class="logo"> 
+                <a href="index.html">
+                    <h3>Find Pet Sitters</h3>
+                    <h6>connect with lovely pet Sitter</h6>
+                </a>
+            </div>
+            
+            <ul class="menu">
+                <li><a href="indexhome.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            
+        </div>
+    </div>
+</nav>
 
-        <label for="pet-type">Pet Type:</label>
-        <select id="pet-type" name="pet-type">
-            <option value="dog">Dog</option>
-            <option value="cat">Cat</option>
-            <option value="hamster">Hamster</option>
-        </select>
+<section id="search-section">
+    <img src="/pngtree-simple-cute-pet-dog-background-picture-image_1375478.jpg" alt="Dog and Cat" class="background-image">
 
+    <h2>เลือกประเภทสัตว์เลี้ยงของคุณ</h2>
+    <form id="search-form">
+        <label for="pet-type" class="dropdown-label">ประเภทสัตว์เลี้ยง:</label>
+        <div class="dropdown">
+            <button onclick="toggleDropdown()">Select Pet(s) <span class="dropdown-arrow">&#9662;</span></button>
+            <div id="dropdown-content" class="dropdown-content">
+                <input type="checkbox" id="cat" name="pet-type" value="cat">
+                <label for="cat">Cat</label><br>
+                <input type="checkbox" id="dog" name="pet-type" value="dog">
+                <label for="dog">Dog</label><br>
+                <input type="checkbox" id="hamster" name="pet-type" value="hamster">
+                <label for="hamster">Hamster</label><br>
+                <input type="checkbox" id="fish" name="pet-type" value="fish">
+                <label for="fish">Fish</label><br>
+                <!-- เพิ่มตัวเลือกเพิ่มเติมตามต้องการ -->
+                <button onclick="confirmSelection()">ยืนยัน</button>
+            </div>
+        </div>
+
+        <!-- นำช่องใส่ข้อความออก -->
+        
         <button type="submit">Search</button>
     </form>
-</div>
+</section>
 
 <script>
-    function submitSearch() {
-        alert("Performing search...");
-        return false;
-    }
+function toggleDropdown() {
+    var dropdownContent = document.getElementById("dropdown-content");
+    dropdownContent.classList.toggle("show");
+}
+
+function confirmSelection() {
+    var dropdownContent = document.getElementById("dropdown-content");
+    dropdownContent.classList.remove("show");
+}
 </script>
 
+<style>
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-label {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-arrow {
+    margin-left: 5px;
+}
+</style>
+
+<footer>
+    <p>&copy; 2024 Find Pet Sitters</p>
+</footer>
+
+<script src="app.js"></script>
 </body>
 </html>
