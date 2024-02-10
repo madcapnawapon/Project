@@ -11,7 +11,6 @@ nav {
     background-color:#3498db;
     padding: 1rem;
    
-
 }
 .nav-wrapper {
     display : flex  ;
@@ -21,8 +20,6 @@ nav {
 .logo a {
     text-decoration: none; /* เพิ่มบรรทัดนี้เพื่อลบเส้นใต้ลิงก์ */
 }
-
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -75,25 +72,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 label {
     margin-bottom: 5px;
 }
@@ -118,8 +96,6 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
-
 
 
 .nav-wrapper .logo h3{
