@@ -99,7 +99,7 @@ section {
 }
 
 .service li a:hover {
-    background-color: #e0e0e0; /* เปลี่ยนสีพื้นหลังเมื่อโฮเวอร์ */
+    background-color: #3498db; /* เปลี่ยนสีพื้นหลังเมื่อโฮเวอร์ */
 }
 
 form {

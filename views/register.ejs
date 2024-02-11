@@ -73,9 +73,9 @@ button:hover {
     <section id="registration-section">
         <img src="/man.webp" alt="man with dog" class="background-image">
         <h2>Pet Sitter Registration</h2>
-        <form id="registration-form" onsubmit="return validateForm()">
+        <form id="registration-form" onsubmit="return validateForm()"action="/user/register" method="post">
             <label for="user-name">User name:</label>
-            <input type="text" id="user-name" name="user-name" required>
+            <input type="text" id="user-name" name="username" required>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
