@@ -4,12 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Sitter Registration</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="/css/registerstyles.css">
+   
 </head>
 <body>
-    <header>
-        <div class="logo">Find Pet Sitters</div>
-    </header>
+    <nav> 
+        <div class="contianer">
+        <div class="nav-wrapper">
+            <div class="logo"> 
+                <a href="/">
+                    <img src="/logo.webp" alt="logo" class="logo-image">
+                    <div class="logo-text"><h3>Find Pet Sitters</h3>
+                        <h6>connect with lovely pet Sitter</h6></div>
+                </a>
+            </div>
+            
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/about">About Us</a></li>
+            </ul>
+            
+        </div>
+    </div>
+    </nav>
     <style>
         /* ... ส่วนที่เหลือ ... */
         
@@ -52,10 +71,11 @@ button:hover {
 
     </style>
     <section id="registration-section">
+        <img src="/man.webp" alt="man with dog" class="background-image">
         <h2>Pet Sitter Registration</h2>
-        <form id="registration-form" onsubmit="return validateForm()">
+        <form id="registration-form" onsubmit="return validateForm()"action="/user/register" method="post">
             <label for="user-name">User name:</label>
-            <input type="text" id="user-name" name="user-name" required>
+            <input type="text" id="user-name" name="username" required>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
@@ -69,7 +89,7 @@ button:hover {
             <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone" required>
 
-            <button type="submit"><a href="Login.html">Register</a></button>
+            <button type="submit">Register</button>
         </form>
     </section>
 
@@ -93,3 +113,4 @@ button:hover {
     </script>
 </body>
 </html>
+
