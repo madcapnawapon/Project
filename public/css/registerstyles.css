@@ -3,9 +3,43 @@
     padding: 0;
     box-sizing: border-box;
 }
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+nav {
+    background-color:#3498db;
+    padding: 1rem;
+   
+}
+.nav-wrapper {
+    display : flex  ;
+    justify-content: space-between;
+     align-items: center;
+}
+.logo a {
+    text-decoration: none; /* เพิ่มบรรทัดนี้เพื่อลบเส้นใต้ลิงก์ */
+    display: flex;
+}
+.logo-image {
+    width: 50px; /* ปรับขนาดความกว้างตามที่คุณต้องการ */
+    height: auto; /* ให้ระบุความสูงเป็น "auto" เพื่อให้มีอัตราส่วนที่ถูกต้อง */
+}
+.logo-text {
+    display: flex;
+    flex-direction: column; /* จัดเรียงข้อความให้อยู่ในแนวดิ่ง */
+}
+
+.logo-text h3 {
+    margin: 0; /* ลบระยะขอบของ <h3> */
+}
+
+.logo-text h6 {
+    margin-top: 5px; /* กำหนดระยะห่างด้านบนของ <h6> */
+}
 
 body {
-    background-image: url('petting\ dog\,cat\ b9f0224d-1ea1-4fd2-bce2-de870beb56d9.png'); /* แทนที่ 'path/to/your/image.jpg' ด้วยที่ตั้งของไฟล์รูปภาพของคุณ */
+     /* แทนที่ 'path/to/your/image.jpg' ด้วยที่ตั้งของไฟล์รูปภาพของคุณ */
     background-size: cover; /* ปรับขนาดรูปภาพให้เต็มพื้นหลัง */
     background-position: center; /* กำหนดตำแหน่งในการจัดวางรูปภาพ */
     background-repeat: no-repeat; /* ป้องกันการทำซ้ำของรูปภาพ */
@@ -14,17 +48,22 @@ body {
     padding: 0;
 }
 
-header {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    text-align: center;
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+     height: 100%;
+     width: 100%;
+     bottom: 100%;
+   
+   /* 
+    
+   
+    object-fit: cover; /* ปรับขนาดภาพให้เต็มพื้นที่ */
+    z-index: -1; /* ส่งไปข้างหลังของเนื้อหา */
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-}
+
 
 section {
     margin: 20px;

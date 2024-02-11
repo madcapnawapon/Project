@@ -17,9 +17,28 @@ nav {
     justify-content: space-between;
      align-items: center;
 }
+
 .logo a {
     text-decoration: none; /* เพิ่มบรรทัดนี้เพื่อลบเส้นใต้ลิงก์ */
+    display: flex;
 }
+.logo-image {
+    width: 50px; /* ปรับขนาดความกว้างตามที่คุณต้องการ */
+    height: auto; /* ให้ระบุความสูงเป็น "auto" เพื่อให้มีอัตราส่วนที่ถูกต้อง */
+}
+.logo-text {
+    display: flex;
+    flex-direction: column; /* จัดเรียงข้อความให้อยู่ในแนวดิ่ง */
+}
+
+.logo-text h3 {
+    margin: 0; /* ลบระยะขอบของ <h3> */
+}
+
+.logo-text h6 {
+    margin-top: 5px; /* กำหนดระยะห่างด้านบนของ <h6> */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -47,7 +66,7 @@ section {
     justify-content: center;
    /* height: 80vh; /* สูงขนาดเท่าไหร่ก็ได้ตามที่คุณต้องการ */
     padding-top: 70px;
-    margin:30;
+    
 }
 
 .service {
