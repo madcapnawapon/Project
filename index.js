@@ -11,12 +11,14 @@ mongoose.connect('mongodb+srv://admin:1234@cluster0.dzu6zww.mongodb.net/?retryWr
 })
 
 const indexController = require('./controllers/indexController')
+const sitterController = require('./controllers/sitterController')
 const loginController = require('./controllers/loginController')
 const registerController = require('./controllers/registerController')
 const ownerController = require('./controllers/ownerController')
 const aboutController = require('./controllers/aboutController')
 const storeUserController = require('./controllers/storeUserController')
 const loginUserController = require('./controllers/loginUserController')
+/*const logoutController = require('./controllers/logoutController')*/
 
 app.use(express.static('public'))
 app.use(express.json())
@@ -29,11 +31,13 @@ app.use(expressSession({
 
 app.get('/',indexController)
 app.get('/login',loginController)
+app.get('/sitter',sitterController)
 app.get('/register',registerController)
 app.get('/owner',ownerController)
 app.get('/about',aboutController)
 app.post('/user/register',storeUserController)
 app.post('/user/login', loginUserController)
+/*app.get('/logout',logoutController)*/
 app.listen(4000, ()=> {
     console.log("app listening on port 4000")
 })
