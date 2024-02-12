@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 const expressSession = require('express-session')
 const flash = require('connect-flash')
 
-
+global.loggedIn = null
 mongoose.connect('mongodb+srv://admin:1234@cluster0.dzu6zww.mongodb.net/?retryWrites=true&w=majority',{
     useNewUrlParser:true
 })
@@ -28,7 +28,10 @@ app.set('view engine', 'ejs')
 app.use(expressSession({
     secret:"node secret"
 }))
-
+app.use("*",(req,res,next)=>{
+    loggedIn= req.session.userid
+    next()
+})
 app.get('/',indexController)
 app.get('/login',loginController)
 app.get('/sitter',sitterController)
