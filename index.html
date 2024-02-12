@@ -50,65 +50,15 @@
                
                 <!-- เพิ่มตัวเลือกเพิ่มเติมตามต้องการ -->
             </select>
-            <select id="service" name="บริการ" >
-                <option value="None">None</option> 
-                <option value="ฝากเลี้ยงค้างคืน">ฝากเลี้ยงค้างคืน</option>
-                <option value="ฝากเลี้ยงรายวัน">ฝากเลี้ยงรายวัน</option>
-                <option value="ฝากเลี้ยงระหว่างวัน">ฝากเลี้ยงระหว่างวัน</option>
-                <option value="ดูแลสัตว์เลี้ยงที่บ้าน">ดูแลสัตว์เลี้ยงที่บ้าน</option>
-                <option value="พาสัตว์เลี้ยงไปเดินเล่น">พาสัตว์เลี้ยงไปเดินเล่น</option>
-                
-               
-                <!-- เพิ่มตัวเลือกเพิ่มเติมตามต้องการ -->
-            </select>
-            <select id="service" name="บริการ" > 
-                <option value="None">None</option>
-                <option value="ฝากเลี้ยงค้างคืน">ฝากเลี้ยงค้างคืน</option>
-                <option value="ฝากเลี้ยงรายวัน">ฝากเลี้ยงรายวัน</option>
-                <option value="ฝากเลี้ยงระหว่างวัน">ฝากเลี้ยงระหว่างวัน</option>
-                <option value="ดูแลสัตว์เลี้ยงที่บ้าน">ดูแลสัตว์เลี้ยงที่บ้าน</option>
-                <option value="พาสัตว์เลี้ยงไปเดินเล่น">พาสัตว์เลี้ยงไปเดินเล่น</option>
-               
-                <!-- เพิ่มตัวเลือกเพิ่มเติมตามต้องการ -->
-            </select>
-            <select id="service" name="บริการ" > 
-                <option value="None">None</option>
-                <option value="ฝากเลี้ยงค้างคืน">ฝากเลี้ยงค้างคืน</option>
-                <option value="ฝากเลี้ยงรายวัน">ฝากเลี้ยงรายวัน</option>
-                <option value="ฝากเลี้ยงระหว่างวัน">ฝากเลี้ยงระหว่างวัน</option>
-                <option value="ดูแลสัตว์เลี้ยงที่บ้าน">ดูแลสัตว์เลี้ยงที่บ้าน</option>
-                <option value="พาสัตว์เลี้ยงไปเดินเล่น">พาสัตว์เลี้ยงไปเดินเล่น</option>
-               
-                <!-- เพิ่มตัวเลือกเพิ่มเติมตามต้องการ -->
-            </select>
-            <select id="service" name="บริการ" > 
-                <option value="None">None</option>
-                <option value="ฝากเลี้ยงค้างคืน">ฝากเลี้ยงค้างคืน</option>
-                <option value="ฝากเลี้ยงรายวัน">ฝากเลี้ยงรายวัน</option>
-                <option value="ฝากเลี้ยงระหว่างวัน">ฝากเลี้ยงระหว่างวัน</option>
-                <option value="ดูแลสัตว์เลี้ยงที่บ้าน">ดูแลสัตว์เลี้ยงที่บ้าน</option>
-                <option value="พาสัตว์เลี้ยงไปเดินเล่น">พาสัตว์เลี้ยงไปเดินเล่น</option>
-               
-                <!-- เพิ่มตัวเลือกเพิ่มเติมตามต้องการ -->
-            </select>
-            <select id="service" name="บริการ" > 
-                <option value="None">None</option>
-                <option value="ฝากเลี้ยงค้างคืน">ฝากเลี้ยงค้างคืน</option>
-                <option value="ฝากเลี้ยงรายวัน">ฝากเลี้ยงรายวัน</option>
-                <option value="ฝากเลี้ยงระหว่างวัน">ฝากเลี้ยงระหว่างวัน</option>
-                <option value="ดูแลสัตว์เลี้ยงที่บ้าน">ดูแลสัตว์เลี้ยงที่บ้าน</option>
-                <option value="พาสัตว์เลี้ยงไปเดินเล่น">พาสัตว์เลี้ยงไปเดินเล่น</option>
-                
-               
-                <!-- เพิ่มตัวเลือกเพิ่มเติมตามต้องการ -->
-            </select>
-
+           
             <label for="service">ที่อยู่และช่องทางการติดต่อ</label>
             <input type="text" id="location" name="location" required>
 
             <label for="pet-type" class="dropdown-label">Pet Type:</label>
             <div class="dropdown">
-                <button onclick="toggleDropdown()">Select Pet(s) <span class="dropdown-arrow">&#9662;</span></button>
+                <button onclick="toggleDropdown(event)">Select Pet(s) <span class="dropdown-arrow">&#9662;</span></button>
+
+
                 <div id="dropdown-content" class="dropdown-content">
                     <input type="checkbox" id="cat" name="pet-type" value="cat">
                     <label for="cat">Cat</label><br>
@@ -119,20 +69,23 @@
                     <input type="checkbox" id="fish" name="pet-type" value="fish">
                     <label for="fish">Fish</label><br>
                     <!-- เพิ่มตัวเลือกเพิ่มเติมตามต้องการ -->
-                    <button onclick="confirmSelection()">ยืนยัน</button>
+                   <button onclick="confirmSelection(event)">ยืนยัน</button>
                 </div>
             </div>
             
             <script>
-            function toggleDropdown() {
-                var dropdownContent = document.getElementById("dropdown-content");
-                dropdownContent.classList.toggle("show");
-            }
-            
-            function confirmSelection() {
-                var dropdownContent = document.getElementById("dropdown-content");
-                dropdownContent.classList.remove("show");
-            }
+            function toggleDropdown(event) {
+    event.preventDefault(); // ป้องกันการรีเฟรชหน้าเว็บ
+    var dropdownContent = document.getElementById("dropdown-content");
+    dropdownContent.classList.toggle("show");
+}
+
+function confirmSelection(event) {
+    event.preventDefault(); // ป้องกันการรีเฟรชหน้าเว็บ
+    var dropdownContent = document.getElementById("dropdown-content");
+    dropdownContent.classList.remove("show");
+}
+
             </script>
             
             <style>
