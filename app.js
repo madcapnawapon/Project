@@ -1,65 +1,45 @@
-const express = require('express');
-const mysql = require('mysql');
-const bodyParser = require('body-parser');
+// Import MongoDB Driver
+const { MongoClient } = require('mongodb');
 
-const app = express();
-const port = 8080;
+// Connection URI (replace with your MongoDB connection string)
+const uri = 'mongodb://localhost:27017/your_database_name';
 
-// เชื่อมต่อกับ MySQL database
-const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '', // แทนที่ด้วยรหัสผ่าน MySQL ของคุณ
-  database: '' // แทนที่ด้วยชื่อฐานข้อมูลของคุณ
-});
+// Create a new MongoClient
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
-db.connect((err) => {
+// Connect to MongoDB
+client.connect(err => {
   if (err) {
-    console.error('ไม่สามารถเชื่อมต่อกับ MySQL: ' + err.stack);
+    console.error('MongoDB connection error:', err);
     return;
   }
-  console.log('เชื่อมต่อกับ MySQL สำเร็จ');
-});
 
-app.use(bodyParser.urlencoded({ extended: true }));
+  // Specify the database and collection
+  const db = client.db('your_database_name');
+  const collection = db.collection('your_collection_name');
 
-// รับ request จากหน้าเว็บสำหรับการ register
-app.post('/register', (req, res) => {
-  const { username, password } = req.body;
-
-  // เพิ่มข้อมูลผู้ใช้ในฐานข้อมูล
-  const sql = 'INSERT INTO users (username, password) VALUES (?, ?)';
-  db.query(sql, [username, password], (err, result) => {
+  // Query the database and display results
+  collection.find({}).toArray((err, result) => {
     if (err) {
-      console.error('เกิดข้อผิดพลาดในการเพิ่มข้อมูล: ' + err.message);
-      res.status(500).send('Error in registration');
-    } else {
-      res.send('Registration successful');
+      console.error('Error fetching data from MongoDB:', err);
+      return;
     }
+
+    // Display results in the HTML document
+    const resultsSection = document.getElementById('results-section');
+    result.forEach(data => {
+      resultsSection.innerHTML += `
+        <div class="post">
+          <div class="post-details">
+            <h3>${data.pet_name}</h3>
+            <p>Service Type: ${data.service_type}</p>
+            <p>${data.additional_details}</p>
+          </div>
+        </div>
+      `;
+    });
+
+    // Close the MongoDB connection
+    client.close();
   });
-});
-
-// รับ request จากหน้าเว็บสำหรับการ login
-app.post('/login', (req, res) => {
-  const { username, password } = req.body;
-
-  // ตรวจสอบข้อมูลผู้ใช้ในฐานข้อมูล
-  const sql = 'SELECT * FROM users WHERE username = ? AND password = ?';
-  db.query(sql, [username, password], (err, result) => {
-    if (err) {
-      console.error('เกิดข้อผิดพลาดในการค้นหาข้อมูล: ' + err.message);
-      res.status(500).send('Error in login');
-    } else {
-      if (result.length > 0) {
-        res.send('Login successful');
-      } else {
-        res.send('Invalid username or password');
-      }
-    }
-  });
-});
-
-
-app.listen(port, () => {
-  console.log(`Server : run on :${port}`);
 });
