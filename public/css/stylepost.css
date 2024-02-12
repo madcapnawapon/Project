@@ -1,0 +1,103 @@
+/* style.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  nav {
+    background-color: #17b5dc;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+  }
+  
+  .menu li {
+    margin-right: 20px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  #search-section {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .background-image {
+    width: 100%;
+  }
+  
+  #search-form {
+    margin-top: 20px;
+  }
+  
+  .service {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .service li {
+    margin-right: 20px;
+  }
+  
+  .service a {
+    text-decoration: none;
+    color: #00e1ff;
+    font-weight: bold;
+  }
+  
+  #results-section {
+    margin: 20px 0;
+  }
+  
+  .post {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .post img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .post-details {
+    flex: 1;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  /* Add more styles as needed */
+  
