@@ -34,16 +34,12 @@
 
     <section id="my-account-section">
         <h2>Welcome to Your Account</h2>
-        
-        <!-- Profile Details -->
-        <div id="profile-details" class="account-section">
-            <h3>Profile Details</h3>
-            <p><strong>Username:</strong> [Username]</p>
-            <p><strong>Email:</strong> [Email]</p>
-            <p><strong>Phone Number:</strong> [Phone Number]</p>
-            <!-- Add other details as needed -->
-        </div>
+        <input type="radio" id="male" name="gender" value="male">
+<label for="male">Male</label>
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label>
 
+       
         <!-- Update Profile -->
         <div id="update-profile" class="account-section">
             <h3>Update Profile</h3>
@@ -56,15 +52,6 @@
 
                 <label for="new-phone">New Phone Number:</label>
                 <input type="tel" id="new-phone" name="new-phone">
-
-                <button type="submit">Update Profile</button>
-            </form>
-        </div>
-
-        <!-- Change Password -->
-        <div id="change-password" class="account-section">
-            <h3>Change Password</h3>
-            <form>
                 <label for="current-password">Current Password:</label>
                 <input type="password" id="current-password" name="current-password">
 
@@ -74,9 +61,12 @@
                 <label for="confirm-new-password">Confirm New Password:</label>
                 <input type="password" id="confirm-new-password" name="confirm-new-password">
 
-                <button type="submit">Change Password</button>
+                <button type="submit">Update Profile</button>
             </form>
         </div>
+
+       
+        
 
         <button onclick="logout()">Logout</button>
         <!-- Add other sections as needed -->
