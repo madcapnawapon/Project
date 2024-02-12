@@ -53,10 +53,18 @@
             <label for="service">ประเภทการใช้งาน</label>
             <ul class="service">
                 
-                <li><a href="/owner"><h3>หาผู้รับเลี้ยง</h3></a></li>
+                
                
-
-                <li><a href="/post"><h3>ผู้รับเลี้ยง</h3></a></li>
+                <% if(loggedIn) { %>
+                
+                    <li><a href="/owner"><h3>หาผู้รับเลี้ยง</h3></a></li>
+                    <li><a href="/post"><h3>ผู้รับเลี้ยง</h3></a></li>
+                    <% } %>   
+                    <% if(!loggedIn) { %>
+                        <li><a href="/owner"><h3>หาผู้รับเลี้ยง</h3></a></li>
+                        <li><a href="/login"><h3>ผู้รับเลี้ยง</h3></a></li>
+                    <% } %>
+                
                 
             </ul>
  
